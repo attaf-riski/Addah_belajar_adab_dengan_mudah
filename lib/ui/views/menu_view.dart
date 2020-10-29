@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyek_addah_attafwagiffar/ui/views/menu_button/menu_button_view.dart';
 import 'package:proyek_addah_attafwagiffar/viewmodels/menu_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -8,19 +9,10 @@ class MenuView extends StatelessWidget {
     return ViewModelBuilder<MenuViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         body: Row(children: [
-          Container(
-            color: Colors.red,
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width * 0.2,
-          ),
-          VerticalDivider(
-            color: Colors.yellow,
-            thickness: 10,
-            width: 5,
-          ),
+          MenuButton(),
           Expanded(
             child: Container(
-              color: Colors.blue,
+              color: Colors.white,
               height: MediaQuery.of(context).size.height,
             ),
           )
